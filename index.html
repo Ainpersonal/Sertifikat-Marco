@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikat Kamu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icons" href="sertifikat/foto1.jpg">
+</head>
+<body>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Background Grid -->
+    <div class="bg-grid"></div>
+    <div class="scanlines"></div>
+
+    <!-- Glitch Text Header -->
+    <div class="header-section">
+        <div class="glitch-wrapper">
+            <h1 class="glitch" data-text="SELAMAT!">SELAMAT!</h1>
+        </div>
+        <p class="subtitle">Kamu telah menyelesaikan perjalananmu</p>
+    </div>
+
+    <!-- Main Scene -->
+    <div class="main-scene">
+
+        <!-- Left Photo -->
+        <div class="photo-card left-card" id="leftCard">
+            <div class="card-inner">
+                <div class="card-glow"></div>
+                <div class="card-img">
+                    <img src="sertifikat/foto1.jpg" alt="Achievement" onerror="this.src='https://picsum.photos/seed/achievement/300/400'">
+                    <div class="img-overlay">
+                        <span class="img-label">KERJA KERAS</span>
+                    </div>
+                </div>
+                <div class="card-badge">★ TOP</div>
+                <div class="card-lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="card-shadow"></div>
+        </div>
+
+        <!-- Center Button Section -->
+        <div class="button-section">
+            <div class="button-ring ring1"></div>
+            <div class="button-ring ring2"></div>
+            <div class="button-ring ring3"></div>
+
+            <div class="cert-icon">
+                <svg viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                    <path d="M20 40L33 53L60 27" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <div class="button-label-top">— UNDUH SEKARANG —</div>
+
+            <a href="#" download="File-Saya.pdf" class="tombol-download" id="downloadBtn">
+                <span class="btn-bg"></span>
+                <span class="btn-text">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M12 2v14M5 9l7 7 7-7M2 20h20"/>
+                    </svg>
+                    Download Sertifikatmu
+                </span>
+                <span class="btn-shine"></span>
+                <span class="btn-particles"></span>
+            </a>
+
+            <div class="button-label-bottom">FORMAT PDF · RESMI · GRATIS</div>
+
+            <div class="score-display">
+                <div class="score-item">
+                    <span class="score-num" data-target="100">0</span>
+                    <span class="score-label">NILAI</span>
+                </div>
+                <div class="score-divider"></div>
+                <div class="score-item">
+                    <span class="score-num" data-target="A+">F</span>
+                    <span class="score-label">GRADE</span>
+                </div>
+                <div class="score-divider"></div>
+                <div class="score-item">
+                    <span class="score-num" data-target="★★★">☆☆☆</span>
+                    <span class="score-label">RATING</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Photo -->
+        <div class="photo-card right-card" id="rightCard">
+            <div class="card-inner">
+                <div class="card-glow"></div>
+                <div class="card-img">
+                    <img src="sertifikat/foto2.jpg" alt="Success" onerror="this.src='https://picsum.photos/seed/success/300/400'">
+                    <div class="img-overlay">
+                        <span class="img-label">PRESTASI</span>
+                    </div>
+                </div>
+                <div class="card-badge">✦ PRO</div>
+                <div class="card-lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="card-shadow"></div>
+        </div>
+
+    </div>
+
+    <!-- Footer Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-track">
+            <span>🏆 SELAMAT ATAS PENCAPAIANMU</span>
+            <span>★ SERTIFIKAT RESMI</span>
+            <span>⚡ DOWNLOAD SEKARANG</span>
+            <span>🎯 KAMU LUAR BIASA</span>
+            <span>🔥 KERJA KERAS TERBAYAR</span>
+            <span>🏆 SELAMAT ATAS PENCAPAIANMU</span>
+            <span>★ SERTIFIKAT RESMI</span>
+            <span>⚡ DOWNLOAD SEKARANG</span>
+            <span>🎯 KAMU LUAR BIASA</span>
+            <span>🔥 KERJA KERAS TERBAYAR</span>
+        </div>
+    </div>
+
+    <!-- BOOM Overlay on Click -->
+    <div class="boom-overlay" id="boomOverlay">
+        <div class="boom-text">BOOM!</div>
+        <div class="boom-sub">Sedang Mengunduh...</div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
